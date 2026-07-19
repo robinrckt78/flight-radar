@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flug-Radar // ZRH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b1220;
+    --bg-panel:#111a2c;
+    --line:#22304a;
+    --text:#e7ecf5;
+    --muted:#8a99b3;
+    --amber:#ffb02e;
+    --tier1:#3ddc84;
+    --tier2:#ffb84d;
+    --tier3:#a9b4c4;
+    --mono:'Space Mono', monospace;
+    --sans:'IBM Plex Sans', sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    min-height:100vh;
+  }
+  header{
+    padding:28px 24px 20px;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .brand{
+    font-family:var(--mono);
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:13px;
+    color:var(--amber);
+  }
+  h1{
+    margin:6px 0 0;
+    font-family:var(--mono);
+    font-size:clamp(22px,4vw,34px);
+    font-weight:700;
+  }
+  .updated{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--muted);
+    text-align:right;
+  }
+  .updated span{color:var(--text);}
+
+  .legend{
+    display:flex;
+    gap:18px;
+    padding:14px 24px;
+    background:var(--bg-panel);
+    border-bottom:1px solid var(--line);
+    flex-wrap:wrap;
+    font-family:var(--mono);
+    font-size:12px;
+  }
+  .legend-item{display:flex;align-items:center;gap:8px;}
+  .dot{width:10px;height:10px;border-radius:2px;display:inline-block;}
+
+  .controls{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    padding:16px 24px;
+    background:var(--bg-panel);
+    border-bottom:1px solid var(--line);
+  }
+  .controls input, .controls select{
+    background:var(--bg);
+    border:1px solid var(--line);
+    color:var(--text);
+    padding:9px 12px;
+    border-radius:4px;
+    font-family:var(--sans);
+    font-size:13px;
+  }
+  .controls input[type="text"]{min-width:200px;flex:1;}
+
+  main{padding:20px 24px 60px;}
+
+  .board{
+    width:100%;
+    border-collapse:collapse;
+    font-family:var(--mono);
+    font-size:13px;
+  }
+  .board thead th{
+    text-align:left;
+    padding:10px 12px;
+    color:var(--muted);
+    font-weight:400;
+    text-transform:uppercase;
+    font-size:11px;
+    letter-spacing:1px;
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    background:var(--bg);
+  }
+  .board tbody tr{
+    border-bottom:1px solid var(--line);
+    transition:background .15s;
+  }
+  .board tbody tr:hover{background:var(--bg-panel);}
+  .board td{padding:12px;}
+
+  .tier-badge{
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:3px;
+    font-weight:700;
+    font-size:11px;
+    color:#0b1220;
+  }
+  .tier-1{background:var(--tier1);}
+  .tier-2{background:var(--tier2);}
+  .tier-3{background:var(--tier3);}
+
+  .country{font-family:var(--sans);font-weight:600;}
+  .points{color:var(--amber);font-weight:700;}
+  .price{white-space:nowrap;}
+  a.book{
+    color:var(--amber);
+    text-decoration:none;
+    border-bottom:1px dotted var(--amber);
+  }
+  a.book:hover{color:#fff;}
+
+  .empty{
+    text-align:center;
+    padding:60px 20px;
+    color:var(--muted);
+    font-family:var(--mono);
+  }
+
+  footer{
+    padding:20px 24px 40px;
+    color:var(--muted);
+    font-size:12px;
+    font-family:var(--mono);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="brand">Flug-Radar &middot; Business Class</div>
+    <h1>Guenstige Fluege ab ZRH</h1>
+  </div>
+  <div class="updated">Letztes Update<br><span id="lastUpdated">-</span></div>
+</header>
+
+<div class="legend">
+  <div class="legend-item"><span class="dot" style="background:var(--tier1)"></span> Top 1 Tier (38-46 Pkt)</div>
+  <div class="legend-item"><span class="dot" style="background:var(--tier2)"></span> Top 2 Tier (30-37 Pkt)</div>
+  <div class="legend-item"><span class="dot" style="background:var(--tier3)"></span> Top 3 Tier (25-30 Pkt)</div>
+</div>
+
+<div class="controls">
+  <input type="text" id="searchBox" placeholder="Land suchen...">
+  <select id="tierFilter">
+    <option value="">Alle Tiers</option>
+    <option value="1">Top 1</option>
+    <option value="2">Top 2</option>
+    <option value="3">Top 3</option>
+  </select>
+  <select id="seasonFilter">
+    <option value="">Alle Seasons</option>
+    <option value="high">High Season</option>
+    <option value="shoulder">Shoulder Season</option>
+    <option value="off">Off Season</option>
+  </select>
+  <select id="regionFilter">
+    <option value="">Alle Regionen</option>
+    <option value="europe">Nur Europa</option>
+    <option value="intl">Nur International</option>
+  </select>
+  <select id="sortBy">
+    <option value="points">Sortieren: Punkte</option>
+    <option value="price">Sortieren: Preis</option>
+    <option value="departure">Sortieren: Abflugdatum</option>
+  </select>
+</div>
+
+<main>
+  <table class="board" id="board">
+    <thead>
+      <tr>
+        <th>Tier</th>
+        <th>Land</th>
+        <th>Preis</th>
+        <th>Airline</th>
+        <th>Stops</th>
+        <th>Abflug</th>
+        <th>Dauer</th>
+        <th>Season</th>
+        <th>Punkte</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody id="boardBody"></tbody>
+  </table>
+  <div class="empty" id="emptyState" style="display:none;">Keine Fluege gefunden. Naechster automatischer Check laeuft bald.</div>
+</main>
+
+<footer>
+  Daten via Travelpayouts &middot; Automatisch aktualisiert 4x/1x taeglich via GitHub Actions &middot; Nur Top 1-3 Tier Fluege werden angezeigt
+</footer>
+
+<script>
+let allFlights = [];
+
+async function loadData(){
+  try{
+    const res = await fetch('data.json?_=' + Date.now());
+    const json = await res.json();
+    allFlights = json.flights || [];
+    document.getElementById('lastUpdated').textContent = json.last_updated
+      ? new Date(json.last_updated).toLocaleString('de-CH')
+      : 'noch keine Daten';
+    render();
+  }catch(e){
+    document.getElementById('emptyState').style.display = 'block';
+    document.getElementById('emptyState').textContent = 'Noch keine Daten vorhanden - der erste automatische Check laeuft bald.';
+  }
+}
+
+function render(){
+  const q = document.getElementById('searchBox').value.toLowerCase();
+  const tier = document.getElementById('tierFilter').value;
+  const season = document.getElementById('seasonFilter').value;
+  const region = document.getElementById('regionFilter').value;
+  const sortBy = document.getElementById('sortBy').value;
+
+  let list = allFlights.filter(f => {
+    if(q && !f.country.toLowerCase().includes(q)) return false;
+    if(tier && String(f.tier) !== tier) return false;
+    if(season && f.season !== season) return false;
+    if(region === 'europe' && !f.is_europe) return false;
+    if(region === 'intl' && f.is_europe) return false;
+    return true;
+  });
+
+  if(sortBy === 'points') list.sort((a,b)=>b.points-a.points);
+  if(sortBy === 'price') list.sort((a,b)=>a.price_chf-b.price_chf);
+  if(sortBy === 'departure') list.sort((a,b)=> new Date(a.departure_at) - new Date(b.departure_at));
+
+  const body = document.getElementById('boardBody');
+  const empty = document.getElementById('emptyState');
+  body.innerHTML = '';
+
+  if(list.length === 0){
+    empty.style.display = 'block';
+    empty.textContent = 'Keine Fluege fuer diesen Filter gefunden.';
+    return;
+  }
+  empty.style.display = 'none';
+
+  for(const f of list){
+    const tr = document.createElement('tr');
+    const dep = f.departure_at ? new Date(f.departure_at).toLocaleDateString('de-CH') : '-';
+    tr.innerHTML = `
+      <td><span class="tier-badge tier-${f.tier}">T${f.tier}</span></td>
+      <td class="country">${f.country}</td>
+      <td class="price">CHF ${f.price_chf}</td>
+      <td>${f.airline || '-'}</td>
+      <td>${f.stopovers}</td>
+      <td>${dep}</td>
+      <td>${f.duration_days ?? '-'} T</td>
+      <td>${f.season || '-'}</td>
+      <td class="points">${f.points}</td>
+      <td>${f.booking_link ? `<a class="book" href="${f.booking_link}" target="_blank" rel="noopener">Buchen &rarr;</a>` : '-'}</td>
+    `;
+    body.appendChild(tr);
+  }
+}
+
+['searchBox','tierFilter','seasonFilter','regionFilter','sortBy'].forEach(id=>{
+  document.getElementById(id).addEventListener('input', render);
+  document.getElementById(id).addEventListener('change', render);
+});
+
+loadData();
+setInterval(loadData, 5 * 60 * 1000); // alle 5 Min neu laden
+</script>
+
+</body>
+</html>

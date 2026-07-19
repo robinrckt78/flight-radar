@@ -1,0 +1,16 @@
+{
+  "star_alliance": [
+    "LH", "LX", "OS", "SN", "LO", "SK", "TP", "TG", "TK", "SQ", "NH", "OZ",
+    "AC", "UA", "CA", "MS", "ET", "SA", "AV", "CM", "NZ", "OU", "A3", "ZH",
+    "EN", "EW"
+  ],
+  "oneworld": [
+    "AA", "BA", "IB", "QF", "CX", "JL", "AY", "AT", "FJ", "AS", "MH", "QR",
+    "RJ", "UL", "AB"
+  ],
+  "skyteam": [
+    "AF", "KL", "DL", "AZ", "KE", "CI", "SU", "AR", "AM", "AZ", "MU", "CZ",
+    "GA", "KQ", "ME", "RO", "SV", "VN", "VS", "UX"
+  ],
+  "_note": "IATA carrier codes. Anything not listed here is scored as 'other' (1 point). Star Alliance = 3pts, OneWorld/SkyTeam = 2pts, Other = 1pt, per the Data Ranking sheet."
+}

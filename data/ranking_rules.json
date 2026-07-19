@@ -1,0 +1,55 @@
+{
+  "airlines": {
+    "star_alliance": 3,
+    "oneworld_skyteam": 2,
+    "other": 1
+  },
+  "pricing_international_chf": [
+    {"min": 0, "max": 1500, "points": 10},
+    {"min": 1500, "max": 2000, "points": 5},
+    {"min": 2000, "max": 2500, "points": 1}
+  ],
+  "pricing_europe_chf": [
+    {"min": 0, "max": 200, "points": 10},
+    {"min": 200, "max": 300, "points": 5},
+    {"min": 300, "max": 500, "points": 1}
+  ],
+  "stopover": {
+    "0": 5,
+    "1": 3,
+    "2": 1
+  },
+  "departure_airport": {
+    "ZRH": 5,
+    "FRA": 3,
+    "MUC": 3,
+    "MIL": 3,
+    "other_europe": 1
+  },
+  "time_to_departure_days": [
+    {"min": 90, "max": null, "points": 3},
+    {"min": 60, "max": 90, "points": 2},
+    {"min": 0, "max": 60, "points": 1}
+  ],
+  "season": {
+    "high": 5,
+    "shoulder": 3,
+    "off": 1
+  },
+  "interest_tier": {
+    "1": 10,
+    "2": 5,
+    "3": 1
+  },
+  "duration_days": [
+    {"min": 14, "max": 21, "points": 5},
+    {"min": 7, "max": 14, "points": 3},
+    {"min": 0, "max": 7, "points": 1}
+  ],
+  "tiers": {
+    "top1": {"min": 38, "max": 46},
+    "top2": {"min": 30, "max": 37},
+    "top3": {"min": 25, "max": 30}
+  },
+  "max_possible_points": 46
+}

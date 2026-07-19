@@ -1,0 +1,5171 @@
+[
+  {
+    "country": "Afghanistan",
+    "interest_tier": 2,
+    "high_season_months": [
+      4,
+      5,
+      6,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      3,
+      11
+    ],
+    "off_season_months": [
+      1,
+      2,
+      7,
+      8,
+      12
+    ]
+  },
+  {
+    "country": "Albania",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      4,
+      5,
+      9,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Algeria",
+    "interest_tier": 1,
+    "high_season_months": [
+      3,
+      4,
+      5,
+      9,
+      10,
+      11
+    ],
+    "shoulder_season_months": [
+      2,
+      12
+    ],
+    "off_season_months": [
+      1,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "American Samoa",
+    "interest_tier": 1,
+    "high_season_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      5,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Andorra",
+    "interest_tier": 3,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      3,
+      6,
+      9
+    ],
+    "off_season_months": [
+      4,
+      5,
+      10,
+      11
+    ]
+  },
+  {
+    "country": "Angola",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Anguilla",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Antarctica",
+    "interest_tier": 1,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      10,
+      3
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Antigua and Barbuda",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Argentina",
+    "interest_tier": 2,
+    "high_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      9
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Armenia",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      4,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Aruba",
+    "interest_tier": 1,
+    "high_season_months": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11,
+      12
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Australia",
+    "interest_tier": 2,
+    "high_season_months": [
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      4,
+      9,
+      10,
+      11
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Austria",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      5,
+      9,
+      10
+    ],
+    "off_season_months": [
+      3,
+      4,
+      11
+    ]
+  },
+  {
+    "country": "Azerbaijan",
+    "interest_tier": 3,
+    "high_season_months": [
+      4,
+      5,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      6,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Bahamas",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Bahrain",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Bangladesh",
+    "interest_tier": 1,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Barbados",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Belarus",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      4,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Belgium",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Belize",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      11
+    ],
+    "off_season_months": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Benin",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Bermuda",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Bhutan",
+    "interest_tier": 1,
+    "high_season_months": [
+      3,
+      4,
+      5,
+      10,
+      11
+    ],
+    "shoulder_season_months": [
+      9,
+      12
+    ],
+    "off_season_months": [
+      1,
+      2,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Bolivia",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Botswana",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Brazil",
+    "interest_tier": 3,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      7
+    ],
+    "shoulder_season_months": [
+      3,
+      4,
+      8,
+      9,
+      10
+    ],
+    "off_season_months": [
+      5,
+      6,
+      11
+    ]
+  },
+  {
+    "country": "Brunei Darussalam",
+    "interest_tier": 3,
+    "high_season_months": [
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      6
+    ],
+    "off_season_months": [
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Bulgaria",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Burkina Faso",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Burundi",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      1,
+      2
+    ],
+    "off_season_months": [
+      3,
+      4,
+      5,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Cambodia",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Cameroon",
+    "interest_tier": 1,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Canada",
+    "interest_tier": 2,
+    "high_season_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      5,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Cape Verde",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      10
+    ],
+    "off_season_months": [
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Cayman Islands",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Central African Republic",
+    "interest_tier": 3,
+    "high_season_months": [
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      11
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Chad",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Chile",
+    "interest_tier": 2,
+    "high_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      9
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "China",
+    "interest_tier": 2,
+    "high_season_months": [
+      4,
+      5,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      3,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Christmas Island",
+    "interest_tier": 1,
+    "high_season_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      5,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Cocos (Keeling) Islands",
+    "interest_tier": 1,
+    "high_season_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      5,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Colombia",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      3,
+      6,
+      9
+    ],
+    "off_season_months": [
+      4,
+      5,
+      10,
+      11
+    ]
+  },
+  {
+    "country": "Comoros",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Congo Republic of",
+    "interest_tier": 1,
+    "high_season_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      5,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      4,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Cook Islands",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      4,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Costa Rica",
+    "interest_tier": 3,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Croatia",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Cuba",
+    "interest_tier": 3,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      11
+    ],
+    "off_season_months": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Cyprus",
+    "interest_tier": 3,
+    "high_season_months": [
+      4,
+      5,
+      6,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      3,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Democratic Republic of the Congo (Kinshasa)",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Denmark",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Djibouti",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Dominica",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Dominican Republic",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "East Timor (Timor-Leste)",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Ecuador",
+    "interest_tier": 1,
+    "high_season_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      5,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      4,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Egypt",
+    "interest_tier": 3,
+    "high_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      9
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "El Salvador",
+    "interest_tier": 1,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      5
+    ],
+    "off_season_months": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Equatorial Guinea",
+    "interest_tier": 1,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      4,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Eritrea",
+    "interest_tier": 1,
+    "high_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      4
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Estonia",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Ethiopia",
+    "interest_tier": 2,
+    "high_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      9
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Falkland Islands",
+    "interest_tier": 1,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      10,
+      3
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Faroe Islands",
+    "interest_tier": 2,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Fiji",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Finland",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "France",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "French Guiana",
+    "interest_tier": 1,
+    "high_season_months": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "shoulder_season_months": [
+      7,
+      12
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "country": "French Polynesia",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      4,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "French Southern Territories",
+    "interest_tier": 1,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      10,
+      3
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Gabon",
+    "interest_tier": 1,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      4,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Gambia",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      4
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Georgia",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      4,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Germany",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Ghana",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Gibraltar",
+    "interest_tier": 3,
+    "high_season_months": [
+      4,
+      5,
+      6,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      3,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Greece",
+    "interest_tier": 2,
+    "high_season_months": [
+      5,
+      6,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      4,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Greenland",
+    "interest_tier": 2,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Grenada",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Guadeloupe",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Guam",
+    "interest_tier": 1,
+    "high_season_months": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Guatemala",
+    "interest_tier": 1,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      5
+    ],
+    "off_season_months": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Guinea",
+    "interest_tier": 1,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      4
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Guinea-Bissau",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      4
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Guyana",
+    "interest_tier": 1,
+    "high_season_months": [
+      2,
+      3,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      1,
+      4,
+      7,
+      10
+    ],
+    "off_season_months": [
+      5,
+      6,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Haiti",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      11
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Honduras",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      11
+    ],
+    "off_season_months": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Hong Kong",
+    "interest_tier": 2,
+    "high_season_months": [
+      10,
+      11,
+      12
+    ],
+    "shoulder_season_months": [
+      3,
+      4,
+      9
+    ],
+    "off_season_months": [
+      1,
+      2,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Hungary",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Iceland",
+    "interest_tier": 2,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "India",
+    "interest_tier": 2,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Indonesia",
+    "interest_tier": 2,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Iran (Islamic Republic of)",
+    "interest_tier": 3,
+    "high_season_months": [
+      4,
+      5,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      3,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Iraq",
+    "interest_tier": 2,
+    "high_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      9
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Ireland",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Israel",
+    "interest_tier": 3,
+    "high_season_months": [
+      3,
+      4,
+      5,
+      9,
+      10,
+      11
+    ],
+    "shoulder_season_months": [
+      2,
+      12
+    ],
+    "off_season_months": [
+      6,
+      7,
+      8,
+      1
+    ]
+  },
+  {
+    "country": "Italy",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      4,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Ivory Coast",
+    "interest_tier": 1,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Jamaica",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Japan",
+    "interest_tier": 1,
+    "high_season_months": [
+      3,
+      4,
+      5,
+      10,
+      11
+    ],
+    "shoulder_season_months": [
+      6,
+      9
+    ],
+    "off_season_months": [
+      1,
+      2,
+      7,
+      8,
+      12
+    ]
+  },
+  {
+    "country": "Jordan",
+    "interest_tier": 3,
+    "high_season_months": [
+      3,
+      4,
+      5,
+      9,
+      10,
+      11
+    ],
+    "shoulder_season_months": [
+      2,
+      12
+    ],
+    "off_season_months": [
+      6,
+      7,
+      8,
+      1
+    ]
+  },
+  {
+    "country": "Kazakhstan",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Kenya",
+    "interest_tier": 2,
+    "high_season_months": [
+      1,
+      2,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Kiribati",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Korea Dem. Repuplic",
+    "interest_tier": 1,
+    "high_season_months": [
+      4,
+      5,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      6,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Korea South",
+    "interest_tier": 2,
+    "high_season_months": [
+      4,
+      5,
+      10,
+      11
+    ],
+    "shoulder_season_months": [
+      3,
+      9
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Kosovo",
+    "interest_tier": 2,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Kuwait",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Kyrgyzstan",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      5,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Lao",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Lebanon",
+    "interest_tier": 3,
+    "high_season_months": [
+      4,
+      5,
+      6,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      3,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Lesotho",
+    "interest_tier": 3,
+    "high_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      4,
+      9
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Liberia",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      4
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Libya",
+    "interest_tier": 3,
+    "high_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      9
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Liechtenstein",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Luxembourg",
+    "interest_tier": 2,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Macau",
+    "interest_tier": 3,
+    "high_season_months": [
+      10,
+      11,
+      12
+    ],
+    "shoulder_season_months": [
+      3,
+      4,
+      9
+    ],
+    "off_season_months": [
+      1,
+      2,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Madagascar",
+    "interest_tier": 1,
+    "high_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      3,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2
+    ]
+  },
+  {
+    "country": "Malawi",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Malaysia",
+    "interest_tier": 2,
+    "high_season_months": [
+      1,
+      2,
+      6,
+      7
+    ],
+    "shoulder_season_months": [
+      3,
+      4,
+      8,
+      9
+    ],
+    "off_season_months": [
+      5,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Maldives",
+    "interest_tier": 1,
+    "high_season_months": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      11,
+      12
+    ],
+    "off_season_months": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Mali",
+    "interest_tier": 2,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Malta",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      4,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Marshall Islands",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  {
+    "country": "Martinique",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Mauritania",
+    "interest_tier": 2,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Mauritius",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      4,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Mayotte",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Mexico",
+    "interest_tier": 1,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      10
+    ],
+    "off_season_months": [
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Micronesia",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  {
+    "country": "Moldova",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Monaco",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Mongolia",
+    "interest_tier": 1,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Montserrat",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Morocco",
+    "interest_tier": 3,
+    "high_season_months": [
+      3,
+      4,
+      5,
+      9,
+      10,
+      11
+    ],
+    "shoulder_season_months": [
+      2,
+      12
+    ],
+    "off_season_months": [
+      6,
+      7,
+      8,
+      1
+    ]
+  },
+  {
+    "country": "Mozambique",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Myanmar",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Namibia",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Nauru",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Nepal",
+    "interest_tier": 3,
+    "high_season_months": [
+      3,
+      4,
+      10,
+      11
+    ],
+    "shoulder_season_months": [
+      2,
+      9
+    ],
+    "off_season_months": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      12
+    ]
+  },
+  {
+    "country": "Netherlands",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Netherlands Antilles",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "New Caledonia",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "New Zealand",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      4,
+      11
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Nicaragua",
+    "interest_tier": 1,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Niger",
+    "interest_tier": 2,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Nigeria",
+    "interest_tier": 2,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Niue",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      4,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Northern Ireland",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Northern Mariana Islands",
+    "interest_tier": 1,
+    "high_season_months": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Norway",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Oman",
+    "interest_tier": 3,
+    "high_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      9
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Pakistan",
+    "interest_tier": 2,
+    "high_season_months": [
+      10,
+      11,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      2,
+      9
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8,
+      12,
+      1
+    ]
+  },
+  {
+    "country": "Palau",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  {
+    "country": "Palestinian territories",
+    "interest_tier": 3,
+    "high_season_months": [
+      3,
+      4,
+      5,
+      9,
+      10,
+      11
+    ],
+    "shoulder_season_months": [
+      2,
+      12
+    ],
+    "off_season_months": [
+      6,
+      7,
+      8,
+      1
+    ]
+  },
+  {
+    "country": "Panama",
+    "interest_tier": 3,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      11
+    ],
+    "off_season_months": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Papua New Guinea",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Paraguay",
+    "interest_tier": 3,
+    "high_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2
+    ]
+  },
+  {
+    "country": "Peru",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Philippines",
+    "interest_tier": 3,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      5
+    ],
+    "off_season_months": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  {
+    "country": "Pitcairn Island",
+    "interest_tier": 1,
+    "high_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2
+    ]
+  },
+  {
+    "country": "Poland",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Portugal",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      4,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Puerto Rico",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Qatar",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Reunion Island",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      4,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Romania",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Russian Federation",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Rwanda",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "off_season_months": [
+      3,
+      4,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Saint Kitts and Nevis",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Saint Lucia",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Saint Vincent and the Grenadines",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Samoa",
+    "interest_tier": 1,
+    "high_season_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      5,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "San Marino",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Sao Tome and Principe",
+    "interest_tier": 1,
+    "high_season_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "off_season_months": [
+      3,
+      4,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Saudi Arabia",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Scotland",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Senegal",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Serbia",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Seychelles",
+    "interest_tier": 1,
+    "high_season_months": [
+      4,
+      5,
+      6,
+      10,
+      11
+    ],
+    "shoulder_season_months": [
+      3,
+      7,
+      9
+    ],
+    "off_season_months": [
+      1,
+      2,
+      8,
+      12
+    ]
+  },
+  {
+    "country": "Sierra Leone",
+    "interest_tier": 2,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Singapore",
+    "interest_tier": 2,
+    "high_season_months": [
+      2,
+      3,
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      1,
+      4,
+      9
+    ],
+    "off_season_months": [
+      5,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Slovakia (Slovak Republic)",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Solomon Islands",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Somalia",
+    "interest_tier": 2,
+    "high_season_months": [
+      1,
+      2,
+      3,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      6,
+      10
+    ],
+    "off_season_months": [
+      5,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "South Africa",
+    "interest_tier": 2,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      9,
+      10
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "South Sudan",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Spain",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      4,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Sri Lanka",
+    "interest_tier": 3,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      8,
+      9
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      10,
+      11
+    ]
+  },
+  {
+    "country": "Sudan",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Suriname",
+    "interest_tier": 1,
+    "high_season_months": [
+      2,
+      3,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      1,
+      4,
+      7,
+      10
+    ],
+    "off_season_months": [
+      5,
+      6,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Swaziland",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Sweden",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9
+    ],
+    "off_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      5,
+      9,
+      10
+    ],
+    "off_season_months": [
+      3,
+      4,
+      11
+    ]
+  },
+  {
+    "country": "Syria",
+    "interest_tier": 3,
+    "high_season_months": [
+      4,
+      5,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      3,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Taiwan (Republic of China)",
+    "interest_tier": 1,
+    "high_season_months": [
+      10,
+      11,
+      12,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      1,
+      2,
+      5
+    ],
+    "off_season_months": [
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Tajikistan",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      4,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Tanzania; officially the United Republic of Tanzania",
+    "interest_tier": 2,
+    "high_season_months": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      1,
+      2,
+      11
+    ],
+    "off_season_months": [
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "country": "Thailand",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      6,
+      10
+    ],
+    "off_season_months": [
+      5,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Tibet",
+    "interest_tier": 2,
+    "high_season_months": [
+      4,
+      5,
+      6,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      3,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Togo",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "shoulder_season_months": [
+      3,
+      10
+    ],
+    "off_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Tokelau",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Tonga",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "interest_tier": 1,
+    "high_season_months": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11,
+      12
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Tunisia",
+    "interest_tier": 3,
+    "high_season_months": [
+      4,
+      5,
+      6,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      3,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Turkey",
+    "interest_tier": 3,
+    "high_season_months": [
+      4,
+      5,
+      6,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      3,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Turkmenistan",
+    "interest_tier": 3,
+    "high_season_months": [
+      4,
+      5,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      3,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Turks and Caicos Islands",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Tuvalu",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Uganda",
+    "interest_tier": 3,
+    "high_season_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      1,
+      2,
+      12
+    ],
+    "off_season_months": [
+      3,
+      4,
+      5,
+      10,
+      11
+    ]
+  },
+  {
+    "country": "Ukraine",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "United Arab Emirates",
+    "interest_tier": 3,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "United Kingdom",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "United States",
+    "interest_tier": 2,
+    "high_season_months": [
+      6,
+      7,
+      8
+    ],
+    "shoulder_season_months": [
+      5,
+      9,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "country": "Uruguay",
+    "interest_tier": 3,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      11
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Uzbekistan",
+    "interest_tier": 3,
+    "high_season_months": [
+      4,
+      5,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      3,
+      11
+    ],
+    "off_season_months": [
+      12,
+      1,
+      2,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Vanuatu",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Vatican City State (Holy See)",
+    "interest_tier": 3,
+    "high_season_months": [
+      4,
+      5,
+      9,
+      10
+    ],
+    "shoulder_season_months": [
+      3,
+      6,
+      11
+    ],
+    "off_season_months": [
+      1,
+      2,
+      7,
+      8,
+      12
+    ]
+  },
+  {
+    "country": "Venezuela",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      11
+    ],
+    "off_season_months": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Vietnam",
+    "interest_tier": 1,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Virgin Islands (British)",
+    "interest_tier": 1,
+    "high_season_months": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shoulder_season_months": [
+      5,
+      6,
+      11
+    ],
+    "off_season_months": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "country": "Wales",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Wallis and Futuna Islands",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  },
+  {
+    "country": "Western Sahara",
+    "interest_tier": 1,
+    "high_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      9
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "country": "Yemen",
+    "interest_tier": 2,
+    "high_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "country": "Zambia",
+    "interest_tier": 1,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "country": "Zimbabwe",
+    "interest_tier": 3,
+    "high_season_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "shoulder_season_months": [
+      4,
+      10
+    ],
+    "off_season_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  }
+]
