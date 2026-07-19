@@ -1,7 +1,7 @@
 """
 Flug-Finder - Kernscript
 =========================
-Holt guenstige BUSINESS-CLASS Fluege ab ZRH ueber die Kiwi.com Tequila API,
+Holt guenstige BUSINESS-CLASS Fluege ab ZRH ueber die Scrappa Google-Flights-API,
 bewertet sie nach den Regeln aus der Excel-Datei (Data Ranking Tab) und
 schreibt das Ergebnis nach docs/data.json (fuer die Webseite) sowie
 history/<datum>.json (fuer die 3-Tage-Historie).
@@ -15,7 +15,6 @@ import json
 import os
 import sys
 import time
-import unicodedata
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -26,14 +25,13 @@ DATA_DIR = ROOT / "data"
 DOCS_DIR = ROOT / "docs"
 HISTORY_DIR = ROOT / "history"
 
-API_TOKEN = os.environ.get("KIWI_API_TOKEN")
+API_KEY = os.environ.get("SCRAPPA_API_KEY")
 ORIGIN = "ZRH"
-CURRENCY = "chf"
-KIWI_ENDPOINT = "https://tequila-api.kiwi.com/v2/search"
-COUNTRY_BATCH_SIZE = 20  # mehrere Laender pro API-Call abfragen (spart Requests)
+CURRENCY = "CHF"
+SCRAPPA_ENDPOINT = "https://scrappa.co/api/flights/round-trip"
 
 # Rule 1 ("Search only business flights or higher") wird direkt in der
-# Kiwi-Anfrage per selected_cabins=C umgesetzt.
+# Anfrage per cabin_class=business umgesetzt.
 
 
 def load_json(path):
@@ -41,110 +39,39 @@ def load_json(path):
         return json.load(f)
 
 
-def normalize(name: str) -> str:
-    name = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode()
-    name = name.lower()
-    for junk in ["republic of", "(", ")", "islamic", "democratic", "the ",
-                 "federation", "kingdom of", "state of", "officially",
-                 ";", "islands", "island"]:
-        name = name.replace(junk, "")
-    return " ".join(name.split())
-
-
-# ISO-3166 Alpha-2 Codes fuer Laender, deren Namen in der Excel-Liste vom
-# offiziellen Namen abweichen (fuer den Rest nutzen wir pycountry.search_fuzzy).
-MANUAL_ISO_OVERRIDES = {
-    "korea south": "KR",
-    "korea dem. repuplic": "KP",
-    "lao": "LA",
-    "congo republic of": "CG",
-    "democratic republic of the congo (kinshasa)": "CD",
-    "taiwan (republic of china)": "TW",
-    "slovakia (slovak republic)": "SK",
-    "vatican city state (holy see)": "VA",
-    "east timor (timor-leste)": "TL",
-    "tanzania; officially the united republic of tanzania": "TZ",
-    "iran (islamic republic of)": "IR",
-    "russian federation": "RU",
-    "cape verde": "CV",
-    "brunei darussalam": "BN",
-    "ivory coast": "CI",
-    "scotland": "GB",
-    "wales": "GB",
-    "northern ireland": "GB",
-    "macau": "MO",
-    "macedonia": "MK",
-    "virgin islands (british)": "VG",
-    "virgin islands (u.s.)": "VI",
-    "netherlands antilles": "CW",
-    "micronesia": "FM",
-    "reunion island": "RE",
-    "cocos (keeling) islands": "CC",
-    "christmas island": "CX",
-    "pitcairn island": "PN",
-    "falkland islands": "FK",
-    "french southern territories": "TF",
-    "palestinian territories": "PS",
-    "tibet": "CN",
-    "western sahara": "MA",
-    "antarctica": None,
-    "french southern territories": "TF",
-}
-
-
-def country_name_to_iso2(country_name):
-    """Wandelt Excel-Laendernamen in ISO-3166 Alpha-2 Codes fuer Kiwi um."""
-    key = normalize(country_name)
-    if key in MANUAL_ISO_OVERRIDES:
-        return MANUAL_ISO_OVERRIDES[key]
-    try:
-        import pycountry
-        match = pycountry.countries.search_fuzzy(country_name)
-        return match[0].alpha_2
-    except Exception:
-        return None
-
-
-def fetch_kiwi_batch(iso_codes, date_from, date_to, retries=3):
-    """Ein Kiwi-Call kann mehrere Zielaender gleichzeitig abfragen (fly_to=A,B,C)."""
+def fetch_flight(destination_airport, departure_date, return_date, retries=3):
+    """Eine Scrappa-Anfrage = ein Land (ein Zielflughafen)."""
     params = {
-        "fly_from": ORIGIN,
-        "fly_to": ",".join(iso_codes),
-        "date_from": date_from,
-        "date_to": date_to,
-        "nights_in_dst_from": 6,
-        "nights_in_dst_to": 22,
-        "flight_type": "round",
-        "selected_cabins": "C",          # Regel 1: Business Class oder besser
+        "origin": ORIGIN,
+        "destination": destination_airport,
+        "departure_date": departure_date,
+        "return_date": return_date,
+        "cabin_class": "business",
         "adults": 1,
-        "curr": CURRENCY,
-        "sort": "price",
-        "limit": 200,
-        "one_for_city": 0,
+        "currency": CURRENCY,
+        "sort_by": "cheapest",
+        "max_stops": "two_or_fewer",
     }
-    headers = {"apikey": API_TOKEN}
+    headers = {"x-api-key": API_KEY}
     for attempt in range(retries):
-        r = requests.get(KIWI_ENDPOINT, params=params, headers=headers, timeout=45)
+        try:
+            r = requests.get(SCRAPPA_ENDPOINT, params=params, headers=headers, timeout=45)
+        except requests.RequestException as e:
+            print(f"  Netzwerkfehler bei {destination_airport}: {e}", file=sys.stderr)
+            time.sleep(3)
+            continue
         if r.status_code == 429:
             time.sleep(5 * (attempt + 1))
             continue
-        r.raise_for_status()
-        return r.json().get("data", [])
-    print(f"Warnung: Rate-Limit bei Batch {iso_codes}, uebersprungen.", file=sys.stderr)
+        if r.status_code != 200:
+            print(f"  Warnung: {destination_airport} -> HTTP {r.status_code}: {r.text[:200]}", file=sys.stderr)
+            return []
+        try:
+            return r.json().get("flights", [])
+        except ValueError:
+            return []
+    print(f"  Rate-Limit bei {destination_airport} nach {retries} Versuchen, uebersprungen.", file=sys.stderr)
     return []
-
-
-def fetch_all_flights(iso_codes):
-    """Fragt alle Ziel-Laender in Batches ab (spart API-Calls)."""
-    date_from = (datetime.now() + timedelta(days=3)).strftime("%d/%m/%Y")
-    date_to = (datetime.now() + timedelta(days=300)).strftime("%d/%m/%Y")
-    all_data = []
-    batches = [iso_codes[i:i + COUNTRY_BATCH_SIZE] for i in range(0, len(iso_codes), COUNTRY_BATCH_SIZE)]
-    for i, batch in enumerate(batches):
-        print(f"Kiwi-Anfrage {i+1}/{len(batches)} ({len(batch)} Laender) ...")
-        all_data.extend(fetch_kiwi_batch(batch, date_from, date_to))
-        time.sleep(1)
-    return all_data
 
 
 def points_for_range(value, ranges):
@@ -159,15 +86,28 @@ def points_for_range(value, ranges):
     return 0
 
 
-def score_flight(item, country, rules, alliances, is_europe):
-    """item = ein rohes Kiwi-Suchergebnis (ein Business-Class-Angebot)."""
-    price = round(item["price"])
-    route = item.get("route", [])
-    outbound_segments = [s for s in route if not s.get("return")]
-    transfers = max(len(outbound_segments) - 1, 0)
-    airline = outbound_segments[0]["airline"] if outbound_segments else item.get("airlines", [""])[0]
-    departure_at = item.get("local_departure")
-    duration_days = item.get("nightsInDest")
+def score_flight(flight, country, rules, alliances, is_europe, departure_date, return_date):
+    """flight = ein rohes Scrappa-Ergebnis-Objekt aus dem 'flights'-Array."""
+    price = flight.get("price") or flight.get("total_price")
+    if price is None:
+        return None
+    price = round(float(price))
+
+    airline = None
+    if flight.get("airline"):
+        airline = flight["airline"]
+    elif flight.get("airlines"):
+        airline = flight["airlines"][0] if isinstance(flight["airlines"], list) else flight["airlines"]
+    elif flight.get("flights"):
+        # verschachtelte Legs (haeufiges Format bei Google-Flights-Scrapern)
+        legs = flight["flights"]
+        if legs:
+            airline = legs[0].get("airline") or legs[0].get("airline_code")
+
+    stops = flight.get("stops")
+    if stops is None:
+        legs = flight.get("flights") or flight.get("segments") or []
+        stops = max(len(legs) - 1, 0) if legs else 0
 
     points = 0
     breakdown = {}
@@ -191,7 +131,7 @@ def score_flight(item, country, rules, alliances, is_europe):
     points += p
 
     # Stopover
-    stop_key = str(min(transfers, 2))
+    stop_key = str(min(int(stops), 2))
     p = rules["stopover"].get(stop_key, 1)
     breakdown["stopover"] = p
     points += p
@@ -202,46 +142,44 @@ def score_flight(item, country, rules, alliances, is_europe):
     points += p
 
     # Time to departure
-    days_out = None
-    dep = None
-    if departure_at:
-        dep = datetime.fromisoformat(departure_at.replace("Z", "+00:00"))
-        days_out = (dep - datetime.now(timezone.utc)).days
-        p = points_for_range(days_out, rules["time_to_departure_days"])
-        breakdown["time_to_departure"] = p
-        points += p
+    dep = datetime.strptime(departure_date, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    days_out = (dep - datetime.now(timezone.utc)).days
+    p = points_for_range(days_out, rules["time_to_departure_days"])
+    breakdown["time_to_departure"] = p
+    points += p
 
     # Season
-    season = None
-    if dep:
-        month = dep.month
-        if month in country["high_season_months"]:
-            season = "high"
-        elif month in country["shoulder_season_months"]:
-            season = "shoulder"
-        else:
-            season = "off"
-        p = rules["season"][season]
-        breakdown["season"] = p
-        points += p
+    month = dep.month
+    if month in country["high_season_months"]:
+        season = "high"
+    elif month in country["shoulder_season_months"]:
+        season = "shoulder"
+    else:
+        season = "off"
+    p = rules["season"][season]
+    breakdown["season"] = p
+    points += p
 
     # Interest (Top1/2/3)
     p = rules["interest_tier"][str(country["interest_tier"])]
     breakdown["interest"] = p
     points += p
 
-    # Duration (Kiwi liefert nightsInDest direkt)
-    if duration_days is not None:
-        p = points_for_range(duration_days, rules["duration_days"])
-        breakdown["duration"] = p
-        points += p
+    # Duration
+    ret = datetime.strptime(return_date, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    duration_days = (ret - dep).days
+    p = points_for_range(duration_days, rules["duration_days"])
+    breakdown["duration"] = p
+    points += p
+
+    booking_link = flight.get("booking_link") or flight.get("google_flights_link")
 
     return {
         "country": country["country"],
         "price_chf": price,
         "airline": airline,
-        "stopovers": transfers,
-        "departure_at": departure_at,
+        "stopovers": int(stops),
+        "departure_at": departure_date,
         "days_until_departure": days_out,
         "duration_days": duration_days,
         "season": season,
@@ -250,7 +188,7 @@ def score_flight(item, country, rules, alliances, is_europe):
         "cabin": "Business",
         "points": points,
         "breakdown": breakdown,
-        "booking_link": item.get("deep_link"),
+        "booking_link": booking_link,
     }
 
 
@@ -270,56 +208,52 @@ def main():
     parser.add_argument("--frequency", choices=["4x", "1x"], required=True)
     args = parser.parse_args()
 
-    if not API_TOKEN:
-        print("FEHLER: Umgebungsvariable KIWI_API_TOKEN fehlt.", file=sys.stderr)
+    if not API_KEY:
+        print("FEHLER: Umgebungsvariable SCRAPPA_API_KEY fehlt.", file=sys.stderr)
         sys.exit(1)
 
     countries = load_json(DATA_DIR / "countries.json")
     rules = load_json(DATA_DIR / "ranking_rules.json")
     europe_list = set(load_json(DATA_DIR / "europe_countries.json"))
     alliances = load_json(DATA_DIR / "airline_alliances.json")
+    country_airports = load_json(DATA_DIR / "country_airports.json")
 
     # Baue Liste der zu pruefenden Laender, gefiltert nach Frequenz-Modus
     selected_countries = []
     for c in countries:
         is_europe = c["country"] in europe_list
+        airport = country_airports.get(c["country"])
+        if not airport:
+            continue  # kein eigener Flughafen (z.B. Vatikan, Monaco)
         if args.frequency == "4x":
-            # Nur Top1 + Top2, nur international (nicht Europa)
             if c["interest_tier"] in (1, 2) and not is_europe:
                 selected_countries.append(c)
         else:
-            # Top3 ODER Europa (unabhaengig von Tier)
             if c["interest_tier"] == 3 or is_europe:
                 selected_countries.append(c)
 
-    print(f"{len(selected_countries)} Laender in diesem Lauf ({args.frequency}). Loese ISO-Codes auf ...")
+    print(f"{len(selected_countries)} Laender in diesem Lauf ({args.frequency}).")
 
-    iso_to_country = {}
-    for c in selected_countries:
-        iso = country_name_to_iso2(c["country"])
-        if iso:
-            iso_to_country[iso] = c
-        else:
-            print(f"  Warnung: kein ISO-Code fuer '{c['country']}' gefunden, uebersprungen.", file=sys.stderr)
-
-    print(f"Frage Kiwi Tequila API ab ({len(iso_to_country)} Laender, Business Class) ...")
-    raw_flights = fetch_all_flights(list(iso_to_country.keys()))
-    print(f"{len(raw_flights)} Business-Class-Angebote erhalten.")
+    # Ein Reisefenster: Abflug in ~3 Monaten, 10 Tage Aufenthalt
+    departure_date = (datetime.now() + timedelta(days=95)).strftime("%Y-%m-%d")
+    return_date = (datetime.now() + timedelta(days=105)).strftime("%Y-%m-%d")
 
     results = []
-    for item in raw_flights:
-        country_code = (item.get("countryTo") or {}).get("code")
-        if not country_code or country_code not in iso_to_country:
-            continue
-        country = iso_to_country[country_code]
+    for i, country in enumerate(selected_countries):
+        airport = country_airports[country["country"]]
+        print(f"[{i+1}/{len(selected_countries)}] {country['country']} ({airport}) ...")
+        raw_flights = fetch_flight(airport, departure_date, return_date)
         is_europe = country["country"] in europe_list
-        scored = score_flight(item, country, rules, alliances, is_europe)
-        scored["tier"] = tier_for_points(scored["points"], rules)
-        if scored["tier"] is not None:
-            results.append(scored)
+        for flight in raw_flights[:3]:  # nur die 3 guenstigsten je Land verarbeiten
+            scored = score_flight(flight, country, rules, alliances, is_europe, departure_date, return_date)
+            if scored is None:
+                continue
+            scored["tier"] = tier_for_points(scored["points"], rules)
+            if scored["tier"] is not None:
+                results.append(scored)
+        time.sleep(0.3)  # kleine Pause zwischen Requests
 
-    # Regel 7: max. 2 Fluege pro Airline+Ziel
-    # Regel: nur Top 1-3 Tiers zeigen, sortiert, max 100
+    # Regel 7: max. 2 Fluege pro Airline+Ziel; nur Top1-3 Tiers, max 100
     results.sort(key=lambda r: -r["points"])
     seen = {}
     deduped = []

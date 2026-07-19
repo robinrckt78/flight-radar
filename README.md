@@ -17,20 +17,23 @@ GitHub Pages.
      `data/`, `docs/`, `scripts/`)
 6. Unten **"Commit changes"** klicken
 
-## Schritt 2: Kiwi.com Tequila API Zugang holen + als Secret hinterlegen
+## Schritt 2: Scrappa API-Key holen + als Secret hinterlegen
 
-1. Geh auf **tequila.kiwi.com/portal/login/register** und registrier dich
-   kostenlos
-2. Nach dem Login: im Portal einen neuen "Application"-Eintrag erstellen
-   (Name z.B. "Flug-Radar") → du bekommst einen **API-Key**
-3. Kopier dir den Key
+1. Geh auf **scrappa.co/register** und leg kostenlos ein Konto an
+2. E-Mail bestaetigen
+3. Im Dashboard einen **API-Key** erstellen (wird nur einmal angezeigt -
+   direkt kopieren und sicher abspeichern!)
+4. Du bekommst automatisch **500 kostenlose Credits/Monat**. Da wir echte
+   Suchmengen brauchen, musst du danach ein kleines Guthaben aufladen
+   (Pay-as-you-go, ca. **5-8$/Monat** bei unserer Suchmenge, siehe
+   scrappa.co/pricing)
 
 Dann im Repo als Secret hinterlegen:
 
 1. Im Repo → **Settings** (oben) → links **"Secrets and variables"** → **"Actions"**
 2. **"New repository secret"**
-3. Name: `KIWI_API_TOKEN`
-4. Value: dein Kiwi-API-Key
+3. Name: `SCRAPPA_API_KEY`
+4. Value: dein Scrappa-API-Key
 5. **"Add secret"**
 
 ## Schritt 3: GitHub Pages aktivieren (deine Webseite)
@@ -68,31 +71,39 @@ Ab jetzt laeuft alles automatisch nach dem hinterlegten Zeitplan (siehe
 
 ## Bekannte Einschraenkungen (bitte lesen)
 
-Ein paar Regeln aus deiner Excel-Liste lassen sich mit einer kostenlosen,
-automatisierten Loesung nicht 1:1 umsetzen. Ehrlich und transparent:
+Ein paar Regeln aus deiner Excel-Liste lassen sich mit einer automatisierten
+Loesung nicht 1:1 umsetzen. Ehrlich und transparent:
 
-- **"Nur Business Class oder hoeher"**: ✅ umgesetzt via Kiwi's
-  `selected_cabins=C` Parameter. Einschraenkung: Kiwi zeigt nur Business
-  Class an (nicht zusaetzlich First Class als "hoeher"). Kann bei Bedarf
-  erweitert werden.
-- **"Nur Preise direkt von Airlines, nicht von Drittanbietern"**: Kiwi ist ein
-  Aggregator und nutzt teils "virtuelles Interlining" (kombiniert separate
-  Tickets verschiedener Airlines zu einer Reise). Das kann von "direkt bei
-  der Airline gebucht" abweichen. Eine echte "nur Airline-direkt"-Pruefung
-  braucht pro Airline eine eigene technische Anbindung.
+- **"Nur Business Class oder hoeher"**: ✅ umgesetzt via Scrappas
+  `cabin_class=business` Parameter (echte Google-Flights-Daten).
+- **Kosten**: Scrappa ist NICHT komplett kostenlos (anders als urspruenglich
+  mit Kiwi/Travelpayouts geplant - beide Wege haben sich als fuer private
+  Projekte nicht zugaenglich herausgestellt: Kiwi ist inzwischen nur noch auf
+  Einladung, Travelpayouts verlangt 50.000 monatliche Nutzer). Rechne mit
+  ca. 5-8$/Monat je nach Suchmenge.
+- **Ein Flughafen pro Land**: Da Scrappa einen exakten Zielflughafen braucht
+  (nicht wie urspruenglich geplant ein ganzes Land), sucht das Tool pro Land
+  nur zum wichtigsten internationalen Flughafen (siehe
+  `data/country_airports.json`). 11 Laender ohne eigenen Flughafen (z.B.
+  Vatikan, Monaco, Andorra) werden uebersprungen.
+- **Nur EIN Reisefenster pro Lauf**: Das Tool sucht aktuell Business-Class-
+  Fluege ca. 3 Monate im Voraus mit 10 Tagen Aufenthalt. Mehrere Zeitfenster
+  gleichzeitig zu pruefen wuerde die Kosten vervielfachen.
+- **"Nur Preise direkt von Airlines, nicht von Drittanbietern"**: Google
+  Flights aggregiert selbst aus vielen Quellen. Eine echte "nur
+  Airline-direkt"-Pruefung braucht pro Airline eine eigene technische Anbindung.
 - **"Morgens/mittags/abends/mitternachts pruefen"**: aktuell wird 1x pro Lauf
-  geprueft (nicht 4x pro Tageszeit zusaetzlich), um die Anzahl API-Calls im
-  kostenlosen Rahmen zu halten.
+  geprueft, um die Kosten im Rahmen zu halten.
 - **Kartenansicht**: aktuell als farbcodierte Liste/Badges umgesetzt (Tier 1/2/3
   Farben wie gewuenscht). Eine echte geografische Weltkarte ist ein moeglicher
   naechster Ausbauschritt.
 - **Departure-Flughafen**: aktuell nur ab ZRH. FRA/MUC/MIL koennen bei Bedarf
   ergaenzt werden.
-- **Kiwi Rate-Limits**: Der kostenlose Kiwi-Zugang hat Limits, die nicht
-  oeffentlich exakt dokumentiert sind. Das Script fragt mehrere Laender pro
-  Call ab (spart Requests) und wartet bei Rate-Limit-Fehlern automatisch.
-  Falls trotzdem oefter Daten fehlen, ist der Wechsel zu Scrappa (~5-8$/Monat,
-  echte Google-Flights-Daten) die naechste Eskalationsstufe.
+- **Antwortformat von Scrappa**: Die Doku zeigt kein vollstaendiges
+  Beispiel fuer das `flights`-Array. Das Script ist defensiv geschrieben
+  (mehrere moegliche Feldnamen), aber beim ersten echten Testlauf lohnt
+  sich ein Blick in die Logs, falls Fluege fehlen sollten - dann passen
+  wir die Feldnamen gemeinsam an.
 - **WhatsApp & E-Mail-Versand**: bewusst noch nicht eingebaut (auf deinen
   Wunsch, kommt spaeter).
 
