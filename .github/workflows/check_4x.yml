@@ -1,0 +1,36 @@
+name: Flug-Check 4x taeglich (Top1+Top2, international)
+
+on:
+  schedule:
+    # UTC-Zeiten! 05:00, 11:00, 15:00, 20:00 UTC = ca. 07:00, 13:00, 17:00, 22:00 Schweizer Zeit
+    - cron: "0 5,11,15,20 * * *"
+  workflow_dispatch: {}   # erlaubt manuelles Starten ueber den "Run workflow" Button
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Abhaengigkeiten installieren
+        run: pip install -r requirements.txt
+
+      - name: Fluege abrufen und bewerten
+        env:
+          SCRAPPA_API_KEY: ${{ secrets.SCRAPPA_API_KEY }}
+        run: python scripts/fetch_flights.py --frequency 4x
+
+      - name: Ergebnisse committen
+        run: |
+          git config user.name "flight-finder-bot"
+          git config user.email "actions@github.com"
+          git add docs/data.json history/
+          git diff --quiet --cached || git commit -m "Update: 4x-Check $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push
