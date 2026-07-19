@@ -1,0 +1,36 @@
+name: Flug-Check 1x taeglich (Top3 + Europa)
+
+on:
+  schedule:
+    # 06:00 UTC = ca. 08:00 Schweizer Zeit
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Abhaengigkeiten installieren
+        run: pip install -r requirements.txt
+
+      - name: Fluege abrufen und bewerten
+        env:
+          SCRAPPA_API_KEY: ${{ secrets.SCRAPPA_API_KEY }}
+        run: python scripts/fetch_flights.py --frequency 1x
+
+      - name: Ergebnisse committen
+        run: |
+          git config user.name "flight-finder-bot"
+          git config user.email "actions@github.com"
+          git add docs/data.json history/
+          git diff --quiet --cached || git commit -m "Update: 1x-Check $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push
