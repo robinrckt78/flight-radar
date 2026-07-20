@@ -39,7 +39,7 @@ def load_json(path):
         return json.load(f)
 
 
-def fetch_flight(destination_airport, departure_date, return_date, retries=3):
+def fetch_flight(destination_airport, departure_date, return_date, retries=2, debug_shown=[False]):
     """Eine Scrappa-Anfrage = ein Land (ein Zielflughafen)."""
     params = {
         "origin": ORIGIN,
@@ -55,22 +55,29 @@ def fetch_flight(destination_airport, departure_date, return_date, retries=3):
     headers = {"x-api-key": API_KEY}
     for attempt in range(retries):
         try:
-            r = requests.get(SCRAPPA_ENDPOINT, params=params, headers=headers, timeout=45)
+            r = requests.get(SCRAPPA_ENDPOINT, params=params, headers=headers, timeout=20)
         except requests.RequestException as e:
             print(f"  Netzwerkfehler bei {destination_airport}: {e}", file=sys.stderr)
-            time.sleep(3)
-            continue
+            return []
         if r.status_code == 429:
-            time.sleep(5 * (attempt + 1))
+            print(f"  Rate-Limit (429) bei {destination_airport}, warte kurz ...", file=sys.stderr)
+            time.sleep(3)
             continue
         if r.status_code != 200:
             print(f"  Warnung: {destination_airport} -> HTTP {r.status_code}: {r.text[:200]}", file=sys.stderr)
             return []
         try:
-            return r.json().get("flights", [])
+            payload = r.json()
         except ValueError:
             return []
-    print(f"  Rate-Limit bei {destination_airport} nach {retries} Versuchen, uebersprungen.", file=sys.stderr)
+        flights = payload.get("flights", [])
+        # Einmaliges Debug-Logging: zeigt uns die ECHTEN Feldnamen von Scrappa
+        if flights and not debug_shown[0]:
+            print("DEBUG - Rohes erstes Flug-Objekt von Scrappa:", file=sys.stderr)
+            print(json.dumps(flights[0], indent=2, ensure_ascii=False)[:2000], file=sys.stderr)
+            debug_shown[0] = True
+        return flights
+    print(f"  Uebersprungen nach {retries} Versuchen: {destination_airport}", file=sys.stderr)
     return []
 
 
@@ -86,7 +93,7 @@ def points_for_range(value, ranges):
     return 0
 
 
-def score_flight(flight, country, rules, alliances, is_europe, departure_date, return_date):
+def score_flight(flight, country, rules, alliances, is_europe, departure_date, return_date, destination_airport):
     """flight = ein rohes Scrappa-Ergebnis-Objekt aus dem 'flights'-Array."""
     price = flight.get("price") or flight.get("total_price")
     if price is None:
@@ -176,6 +183,7 @@ def score_flight(flight, country, rules, alliances, is_europe, departure_date, r
 
     return {
         "country": country["country"],
+        "destination_airport": destination_airport,
         "price_chf": price,
         "airline": airline,
         "stopovers": int(stops),
@@ -206,6 +214,8 @@ def tier_for_points(points, rules):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--frequency", choices=["4x", "1x"], required=True)
+    parser.add_argument("--limit", type=int, default=None,
+                         help="Nur die ersten N Laender pruefen (zum Testen)")
     args = parser.parse_args()
 
     if not API_KEY:
@@ -234,6 +244,10 @@ def main():
 
     print(f"{len(selected_countries)} Laender in diesem Lauf ({args.frequency}).")
 
+    if args.limit:
+        selected_countries = selected_countries[:args.limit]
+        print(f"Test-Modus: nur die ersten {len(selected_countries)} Laender.")
+
     # Ein Reisefenster: Abflug in ~3 Monaten, 10 Tage Aufenthalt
     departure_date = (datetime.now() + timedelta(days=95)).strftime("%Y-%m-%d")
     return_date = (datetime.now() + timedelta(days=105)).strftime("%Y-%m-%d")
@@ -245,7 +259,7 @@ def main():
         raw_flights = fetch_flight(airport, departure_date, return_date)
         is_europe = country["country"] in europe_list
         for flight in raw_flights[:3]:  # nur die 3 guenstigsten je Land verarbeiten
-            scored = score_flight(flight, country, rules, alliances, is_europe, departure_date, return_date)
+            scored = score_flight(flight, country, rules, alliances, is_europe, departure_date, return_date, airport)
             if scored is None:
                 continue
             scored["tier"] = tier_for_points(scored["points"], rules)

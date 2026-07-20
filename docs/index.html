@@ -203,6 +203,7 @@
       <tr>
         <th>Tier</th>
         <th>Land</th>
+        <th>Flughafen</th>
         <th>Preis</th>
         <th>Airline</th>
         <th>Stops</th>
@@ -277,6 +278,7 @@ function render(){
     tr.innerHTML = `
       <td><span class="tier-badge tier-${f.tier}">T${f.tier}</span></td>
       <td class="country">${f.country}</td>
+      <td>ZRH &rarr; ${f.destination_airport || '-'}</td>
       <td class="price">CHF ${f.price_chf}</td>
       <td>${f.airline || '-'}</td>
       <td>${f.stopovers}</td>
