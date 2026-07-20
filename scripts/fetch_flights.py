@@ -134,8 +134,6 @@ def score_flight(flight, country, rules, alliances, is_europe, departure_date, r
             airline_name = legs[0].get("airline_name")
 
     is_one_way_only = flight.get("trip_type") == "one_way" and not flight.get("return_legs")
-    if is_one_way_only:
-        return None  # Regel: nur echte Hin+Rueck-Angebote werden bewertet
 
     stops = flight.get("stops")
     if stops is None:
@@ -223,6 +221,7 @@ def score_flight(flight, country, rules, alliances, is_europe, departure_date, r
         "interest_tier": country["interest_tier"],
         "is_europe": is_europe,
         "cabin": "Business",
+        "one_way_only": is_one_way_only,
         "points": points,
         "breakdown": breakdown,
         "booking_link": booking_link,
@@ -293,10 +292,6 @@ def main():
             has_return = bool(flight.get("return_legs"))
             price = flight.get("price")
             print(f"     Preis={price} trip_type={trip_type} return_legs={'ja' if has_return else 'nein'}")
-            if trip_type == "one_way" and not has_return and flight.get("booking_token"):
-                details = fetch_booking_details(flight["booking_token"])
-                if details:
-                    print(f"     booking_details Ergebnis: {json.dumps(details, ensure_ascii=False)[:500]}")
             scored = score_flight(flight, country, rules, alliances, is_europe, departure_date, return_date, airport)
             if scored is None:
                 print("     -> uebersprungen (kein echtes Hin+Rueck-Angebot)")

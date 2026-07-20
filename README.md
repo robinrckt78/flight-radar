@@ -108,9 +108,15 @@ Loesung nicht 1:1 umsetzen. Ehrlich und transparent:
   Token). Das Tool baut stattdessen einen funktionierenden Google-Flights-
   Such-Link zusammen - du landest auf der Suchseite mit den passenden Daten,
   statt direkt auf einer Buchungsseite.
-- **Vereinzelt Einweg-Preise**: Bei seltenen Strecken liefert Google Flights
-  manchmal keinen kombinierbaren Rückflugtarif. Das Tool markiert das dann
-  mit "(nur Hinflug)" auf der Webseite.
+- **Preis = meistens Hinflug, nicht Rundreise**: Das ist die wichtigste Einschraenkung.
+  Scrappas Google-Flights-Endpunkt liefert fuer Business Class auf den meisten
+  Strecken nur zuverlaessig kombinierbare Hinflug-Preise (echte, live gescrapte
+  und buchbare Preise - keine Erfindung, aber eben nicht automatisch der volle
+  Rundreise-Preis). Ein extra "booking_details"-Endpunkt, der den kombinierten
+  Preis liefern koennte, hat sich als nicht nutzbar herausgestellt (verlangt
+  wieder alle Suchparameter, keine echte Abkuerzung). Die Webseite markiert
+  das transparent mit "(Hinflug)" - vor dem Buchen lohnt sich ein Klick auf
+  den Link, um den echten Rundreise-Gesamtpreis zu pruefen.
 - **WhatsApp & E-Mail-Versand**: bewusst noch nicht eingebaut (auf deinen
   Wunsch, kommt spaeter).
 
