@@ -81,7 +81,32 @@ def fetch_flight(destination_airport, departure_date, return_date, retries=2, de
     return []
 
 
-def points_for_range(value, ranges):
+BOOKING_DETAILS_ENDPOINT = "https://scrappa.co/api/flights/booking-details"
+
+
+def fetch_booking_details(booking_token, debug_shown=[False]):
+    """Versucht, ueber den booking_token die echten (Rundreise-)Preisdetails zu holen."""
+    if not booking_token:
+        return None
+    headers = {"x-api-key": API_KEY}
+    try:
+        r = requests.get(BOOKING_DETAILS_ENDPOINT, params={"booking_token": booking_token},
+                          headers=headers, timeout=20)
+    except requests.RequestException as e:
+        print(f"     Netzwerkfehler bei booking_details: {e}", file=sys.stderr)
+        return None
+    if r.status_code != 200:
+        print(f"     booking_details -> HTTP {r.status_code}: {r.text[:200]}", file=sys.stderr)
+        return None
+    try:
+        data = r.json()
+    except ValueError:
+        return None
+    if not debug_shown[0]:
+        print("DEBUG - Rohe Antwort von booking_details:", file=sys.stderr)
+        print(json.dumps(data, indent=2, ensure_ascii=False)[:2000], file=sys.stderr)
+        debug_shown[0] = True
+    return data
     for r in ranges:
         lo = r["min"]
         hi = r["max"]
@@ -268,6 +293,10 @@ def main():
             has_return = bool(flight.get("return_legs"))
             price = flight.get("price")
             print(f"     Preis={price} trip_type={trip_type} return_legs={'ja' if has_return else 'nein'}")
+            if trip_type == "one_way" and not has_return and flight.get("booking_token"):
+                details = fetch_booking_details(flight["booking_token"])
+                if details:
+                    print(f"     booking_details Ergebnis: {json.dumps(details, ensure_ascii=False)[:500]}")
             scored = score_flight(flight, country, rules, alliances, is_europe, departure_date, return_date, airport)
             if scored is None:
                 print("     -> uebersprungen (kein echtes Hin+Rueck-Angebot)")
