@@ -81,32 +81,7 @@ def fetch_flight(destination_airport, departure_date, return_date, retries=2, de
     return []
 
 
-BOOKING_DETAILS_ENDPOINT = "https://scrappa.co/api/flights/booking-details"
-
-
-def fetch_booking_details(booking_token, debug_shown=[False]):
-    """Versucht, ueber den booking_token die echten (Rundreise-)Preisdetails zu holen."""
-    if not booking_token:
-        return None
-    headers = {"x-api-key": API_KEY}
-    try:
-        r = requests.get(BOOKING_DETAILS_ENDPOINT, params={"booking_token": booking_token},
-                          headers=headers, timeout=20)
-    except requests.RequestException as e:
-        print(f"     Netzwerkfehler bei booking_details: {e}", file=sys.stderr)
-        return None
-    if r.status_code != 200:
-        print(f"     booking_details -> HTTP {r.status_code}: {r.text[:200]}", file=sys.stderr)
-        return None
-    try:
-        data = r.json()
-    except ValueError:
-        return None
-    if not debug_shown[0]:
-        print("DEBUG - Rohe Antwort von booking_details:", file=sys.stderr)
-        print(json.dumps(data, indent=2, ensure_ascii=False)[:2000], file=sys.stderr)
-        debug_shown[0] = True
-    return data
+def points_for_range(value, ranges):
     for r in ranges:
         lo = r["min"]
         hi = r["max"]
