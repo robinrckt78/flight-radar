@@ -279,7 +279,7 @@ function render(){
       <td><span class="tier-badge tier-${f.tier}">T${f.tier}</span></td>
       <td class="country">${f.country}</td>
       <td>ZRH &rarr; ${f.destination_airport || '-'}</td>
-      <td class="price">CHF ${f.price_chf}</td>
+      <td class="price">CHF ${f.price_chf}${f.one_way_only ? ' <span style="color:var(--muted);font-size:10px;">(nur Hinflug)</span>' : ''}</td>
       <td>${f.airline || '-'}</td>
       <td>${f.stopovers}</td>
       <td>${dep}</td>

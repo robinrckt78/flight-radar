@@ -104,6 +104,13 @@ Loesung nicht 1:1 umsetzen. Ehrlich und transparent:
   (mehrere moegliche Feldnamen), aber beim ersten echten Testlauf lohnt
   sich ein Blick in die Logs, falls Fluege fehlen sollten - dann passen
   wir die Feldnamen gemeinsam an.
+- **Buchungslink**: Scrappa liefert keine fertige Buchungs-URL (nur einen technischen
+  Token). Das Tool baut stattdessen einen funktionierenden Google-Flights-
+  Such-Link zusammen - du landest auf der Suchseite mit den passenden Daten,
+  statt direkt auf einer Buchungsseite.
+- **Vereinzelt Einweg-Preise**: Bei seltenen Strecken liefert Google Flights
+  manchmal keinen kombinierbaren Rückflugtarif. Das Tool markiert das dann
+  mit "(nur Hinflug)" auf der Webseite.
 - **WhatsApp & E-Mail-Versand**: bewusst noch nicht eingebaut (auf deinen
   Wunsch, kommt spaeter).
 

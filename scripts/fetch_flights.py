@@ -101,19 +101,14 @@ def score_flight(flight, country, rules, alliances, is_europe, departure_date, r
     price = round(float(price))
 
     airline = None
-    if flight.get("airline"):
-        airline = flight["airline"]
-    elif flight.get("airlines"):
-        airline = flight["airlines"][0] if isinstance(flight["airlines"], list) else flight["airlines"]
-    elif flight.get("flights"):
-        # verschachtelte Legs (haeufiges Format bei Google-Flights-Scrapern)
-        legs = flight["flights"]
-        if legs:
-            airline = legs[0].get("airline") or legs[0].get("airline_code")
+    legs = flight.get("legs") or flight.get("outbound_legs") or []
+    if legs:
+        airline = legs[0].get("airline")
+
+    is_one_way_only = flight.get("trip_type") == "one_way" and not flight.get("return_legs")
 
     stops = flight.get("stops")
     if stops is None:
-        legs = flight.get("flights") or flight.get("segments") or []
         stops = max(len(legs) - 1, 0) if legs else 0
 
     points = 0
@@ -179,7 +174,10 @@ def score_flight(flight, country, rules, alliances, is_europe, departure_date, r
     breakdown["duration"] = p
     points += p
 
-    booking_link = flight.get("booking_link") or flight.get("google_flights_link")
+    booking_link = flight.get("booking_link") or (
+        f"https://www.google.com/travel/flights?q=Flights%20from%20{ORIGIN}%20to%20"
+        f"{destination_airport}%20on%20{departure_date}%20through%20{return_date}"
+    )
 
     return {
         "country": country["country"],
@@ -194,6 +192,7 @@ def score_flight(flight, country, rules, alliances, is_europe, departure_date, r
         "interest_tier": country["interest_tier"],
         "is_europe": is_europe,
         "cabin": "Business",
+        "one_way_only": is_one_way_only,
         "points": points,
         "breakdown": breakdown,
         "booking_link": booking_link,
