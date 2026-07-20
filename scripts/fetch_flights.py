@@ -261,12 +261,19 @@ def main():
         airport = country_airports[country["country"]]
         print(f"[{i+1}/{len(selected_countries)}] {country['country']} ({airport}) ...")
         raw_flights = fetch_flight(airport, departure_date, return_date)
+        print(f"  -> {len(raw_flights)} Rohergebnisse von Scrappa")
         is_europe = country["country"] in europe_list
         for flight in raw_flights[:3]:  # nur die 3 guenstigsten je Land verarbeiten
+            trip_type = flight.get("trip_type")
+            has_return = bool(flight.get("return_legs"))
+            price = flight.get("price")
+            print(f"     Preis={price} trip_type={trip_type} return_legs={'ja' if has_return else 'nein'}")
             scored = score_flight(flight, country, rules, alliances, is_europe, departure_date, return_date, airport)
             if scored is None:
+                print("     -> uebersprungen (kein echtes Hin+Rueck-Angebot)")
                 continue
             scored["tier"] = tier_for_points(scored["points"], rules)
+            print(f"     -> {scored['points']} Punkte, Tier {scored['tier']}")
             if scored["tier"] is not None:
                 results.append(scored)
         time.sleep(0.3)  # kleine Pause zwischen Requests
