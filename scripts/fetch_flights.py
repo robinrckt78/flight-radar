@@ -28,6 +28,7 @@ HISTORY_DIR = ROOT / "history"
 API_KEY = os.environ.get("SCRAPPA_API_KEY")
 ORIGIN = "ZRH"
 CURRENCY = "CHF"
+MAX_ONE_WAY_PRICE_CHF = 3000
 SCRAPPA_ENDPOINT = "https://scrappa.co/api/flights/round-trip"
 
 # Rule 1 ("Search only business flights or higher") wird direkt in der
@@ -100,6 +101,9 @@ def score_flight(flight, country, rules, alliances, is_europe, departure_date, r
         return None
     price = round(float(price))
 
+    if price > MAX_ONE_WAY_PRICE_CHF:
+        return None  # zu teuer, komplett ausblenden
+
     airline = None
     airline_name = flight.get("airline_name")
     legs = flight.get("legs") or flight.get("outbound_legs") or []
@@ -128,10 +132,14 @@ def score_flight(flight, country, rules, alliances, is_europe, departure_date, r
     points += p
 
     # Preis: Europa ODER International (Regel 5)
+    # Die Excel-Schwellen (z.B. 0-1500 CHF = 10 Punkte) sind fuer Rundreise-Preise
+    # gedacht. Da wir nur den Hinflug-Preis haben, schaetzen wir den Rundreise-
+    # Preis als Hinflug x 2 fuer die Punkteberechnung.
+    estimated_round_trip_price = price * 2
     if is_europe:
-        p = points_for_range(price, rules["pricing_europe_chf"])
+        p = points_for_range(estimated_round_trip_price, rules["pricing_europe_chf"])
     else:
-        p = points_for_range(price, rules["pricing_international_chf"])
+        p = points_for_range(estimated_round_trip_price, rules["pricing_international_chf"])
     breakdown["price"] = p
     points += p
 
