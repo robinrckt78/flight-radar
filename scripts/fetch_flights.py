@@ -101,11 +101,16 @@ def score_flight(flight, country, rules, alliances, is_europe, departure_date, r
     price = round(float(price))
 
     airline = None
+    airline_name = flight.get("airline_name")
     legs = flight.get("legs") or flight.get("outbound_legs") or []
     if legs:
         airline = legs[0].get("airline")
+        if not airline_name:
+            airline_name = legs[0].get("airline_name")
 
     is_one_way_only = flight.get("trip_type") == "one_way" and not flight.get("return_legs")
+    if is_one_way_only:
+        return None  # Regel: nur echte Hin+Rueck-Angebote werden bewertet
 
     stops = flight.get("stops")
     if stops is None:
@@ -183,7 +188,8 @@ def score_flight(flight, country, rules, alliances, is_europe, departure_date, r
         "country": country["country"],
         "destination_airport": destination_airport,
         "price_chf": price,
-        "airline": airline,
+        "airline": airline_name or airline,
+        "airline_code": airline,
         "stopovers": int(stops),
         "departure_at": departure_date,
         "days_until_departure": days_out,
@@ -192,7 +198,6 @@ def score_flight(flight, country, rules, alliances, is_europe, departure_date, r
         "interest_tier": country["interest_tier"],
         "is_europe": is_europe,
         "cabin": "Business",
-        "one_way_only": is_one_way_only,
         "points": points,
         "breakdown": breakdown,
         "booking_link": booking_link,
