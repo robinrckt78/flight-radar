@@ -1,93 +1,6 @@
 {
   "flights": [
     {
-      "country": "Western Sahara",
-      "destination_airport": "EUN",
-      "price_chf": 1815,
-      "airline": "Royal Air Maroc",
-      "airline_code": "AT",
-      "stopovers": 1,
-      "departure_at": "2026-11-04",
-      "days_until_departure": 94,
-      "duration_days": 10,
-      "season": "high",
-      "interest_tier": 1,
-      "is_europe": false,
-      "cabin": "Business",
-      "one_way_only": true,
-      "points": 31,
-      "breakdown": {
-        "airline": 2,
-        "price": 0,
-        "stopover": 3,
-        "departure": 5,
-        "time_to_departure": 3,
-        "season": 5,
-        "interest": 10,
-        "duration": 3
-      },
-      "booking_link": "https://www.google.com/travel/flights?q=Flights%20from%20ZRH%20to%20EUN%20on%202026-11-04%20through%202026-11-14",
-      "tier": 2
-    },
-    {
-      "country": "Western Sahara",
-      "destination_airport": "EUN",
-      "price_chf": 2772,
-      "airline": "Iberia",
-      "airline_code": "IB",
-      "stopovers": 2,
-      "departure_at": "2026-11-04",
-      "days_until_departure": 94,
-      "duration_days": 10,
-      "season": "high",
-      "interest_tier": 1,
-      "is_europe": false,
-      "cabin": "Business",
-      "one_way_only": true,
-      "points": 29,
-      "breakdown": {
-        "airline": 2,
-        "price": 0,
-        "stopover": 1,
-        "departure": 5,
-        "time_to_departure": 3,
-        "season": 5,
-        "interest": 10,
-        "duration": 3
-      },
-      "booking_link": "https://www.google.com/travel/flights?q=Flights%20from%20ZRH%20to%20EUN%20on%202026-11-04%20through%202026-11-14",
-      "tier": 3
-    },
-    {
-      "country": "Western Sahara",
-      "destination_airport": "EUN",
-      "price_chf": 2783,
-      "airline": "Iberia",
-      "airline_code": "IB",
-      "stopovers": 2,
-      "departure_at": "2026-11-04",
-      "days_until_departure": 94,
-      "duration_days": 10,
-      "season": "high",
-      "interest_tier": 1,
-      "is_europe": false,
-      "cabin": "Business",
-      "one_way_only": true,
-      "points": 29,
-      "breakdown": {
-        "airline": 2,
-        "price": 0,
-        "stopover": 1,
-        "departure": 5,
-        "time_to_departure": 3,
-        "season": 5,
-        "interest": 10,
-        "duration": 3
-      },
-      "booking_link": "https://www.google.com/travel/flights?q=Flights%20from%20ZRH%20to%20EUN%20on%202026-11-04%20through%202026-11-14",
-      "tier": 3
-    },
-    {
       "country": "Ethiopia",
       "destination_airport": "ADD",
       "price_chf": 2350,
@@ -114,35 +27,6 @@
         "duration": 3
       },
       "booking_link": "https://www.google.com/travel/flights?q=Flights%20from%20ZRH%20to%20ADD%20on%202026-11-04%20through%202026-11-14",
-      "tier": 3
-    },
-    {
-      "country": "Iraq",
-      "destination_airport": "BGW",
-      "price_chf": 1764,
-      "airline": "EgyptAir",
-      "airline_code": "MS",
-      "stopovers": 1,
-      "departure_at": "2026-11-04",
-      "days_until_departure": 94,
-      "duration_days": 10,
-      "season": "high",
-      "interest_tier": 2,
-      "is_europe": false,
-      "cabin": "Business",
-      "one_way_only": true,
-      "points": 27,
-      "breakdown": {
-        "airline": 3,
-        "price": 0,
-        "stopover": 3,
-        "departure": 5,
-        "time_to_departure": 3,
-        "season": 5,
-        "interest": 5,
-        "duration": 3
-      },
-      "booking_link": "https://www.google.com/travel/flights?q=Flights%20from%20ZRH%20to%20BGW%20on%202026-11-04%20through%202026-11-14",
       "tier": 3
     },
     {
@@ -204,5 +88,5 @@
       "tier": 3
     }
   ],
-  "last_updated": "2026-08-01T11:06:48.441967+00:00"
+  "last_updated": "2026-08-01T15:01:58.770226+00:00"
 }
